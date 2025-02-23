@@ -28,10 +28,10 @@ import streamlit as st
 import tensorflow as tf
 
 tf.get_logger().setLevel('ERROR')
-from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model # type: ignore
 
 # Load the pre-trained model
-model = load_model("mask_classifier.h5")
+model = load_model("model/mask_classifier.h5")
 
 def predict_image(image):
     try:
